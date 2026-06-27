@@ -1,0 +1,36 @@
+# ============================================================
+# Petunjuk Menjalankan ETL Pipeline — Fashion Studio Dicoding
+# ============================================================
+
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Menjalankan skrip ETL pipeline
+python3 main.py
+
+# ============================================================
+# Konfigurasi Opsional (Google Sheets & PostgreSQL)
+# ============================================================
+# Untuk menyimpan ke Google Sheets, set environment variable:
+#   export SPREADSHEET_ID="your-google-spreadsheet-id"
+# Pastikan file google-sheets-api.json tersedia di root proyek.
+#
+# Untuk menyimpan ke PostgreSQL, set environment variable:
+#   export DATABASE_URL="postgresql://user:password@host:5432/dbname"
+# ============================================================
+
+# 3. Menjalankan unit test pada folder tests
+python3 -m pytest tests
+
+# 4. Menjalankan test coverage pada folder tests
+coverage run -m pytest tests
+coverage report -m
+
+# Atau dengan pytest-cov langsung:
+python3 -m pytest tests --cov=utils --cov-report=term-missing
+
+# ============================================================
+# URL Google Sheets:
+# https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/edit?usp=sharing
+# (Ganti YOUR_SPREADSHEET_ID dengan ID spreadsheet Anda)
+# ============================================================

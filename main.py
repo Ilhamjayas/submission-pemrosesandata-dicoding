@@ -17,7 +17,7 @@ SPREADSHEET_ID = os.getenv(
 
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql+psycopg2://postgres.bvjdddqpmjzjnydhnglo:saputra*#05@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
+    ""
 )
 # ─────────────────────────────────────────────────────────────────────────────
 
